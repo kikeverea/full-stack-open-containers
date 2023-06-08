@@ -1,0 +1,25 @@
+Script started on 2023-06-08 18:24:07+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="105" LINES="55"]
+[?2004h[01;32mkike@Kike[00m:[01;34m~/full-stack-open-containers/containers-applications[01;31m(main)[00m$ docker container run -it ubuntu bas h
+[?2004ldocker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+[?2004h[01;32mkike@Kike[00m:[01;34m~/full-stack-open-containers/containers-applications[01;31m(main)[00m$ sudo !!
+[?2004lsudo docker container run -it ubuntu bash
+[sudo] password for kike: 
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K837dd4791cdc: Pulling fs layer [1B[1A[2K837dd4791cdc: Downloading  310.5kB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  932.2kB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  4.639MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  8.579MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  12.61MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  16.61MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  20.57MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  23.64MB/29.53MB[1B[1A[2K837dd4791cdc: Downloading  25.51MB/29.53MB[1B[1A[2K837dd4791cdc: Verifying Checksum [1B[1A[2K837dd4791cdc: Download complete [1B[1A[2K837dd4791cdc: Extracting  327.7kB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  5.571MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting   8.52MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting   11.8MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  17.37MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  21.63MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  25.23MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  25.89MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  28.18MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  29.49MB/29.53MB[1B[1A[2K837dd4791cdc: Extracting  29.53MB/29.53MB[1B[1A[2K837dd4791cdc: Pull complete [1BDigest: sha256:ac58ff7fe25edc58bdf0067ca99df00014dbd032e2246d30a722fa348fd799a5
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@2618d609f89b: /root@2618d609f89b:/# mkdir /us         ls
+[?2004l[0m[01;36mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;36mlib32[0m  [01;36mlibx32[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;36mlib[0m   [01;36mlib64[0m  [01;34mmedia[0m   [01;34mopt[0m  [01;34mroot[0m  [01;36msbin[0m  [01;34msys[0m  [01;34musr[0m
+[?2004h]0;root@2618d609f89b: /root@2618d609f89b:/# mkdir /usr/src/app/in  
+[?2004l[?2004h]0;root@2618d609f89b: /root@2618d609f89b:/# touch /usr/src/o ao pp/index.js
+[?2004l[?2004h]0;root@2618d609f89b: /root@2618d609f89b:/# [Kexit    ls /usr/src/app/
+[?2004lindex.js
+[?2004h]0;root@2618d609f89b: /root@2618d609f89b:/# exit
+[?2004lexit
+[?2004h[01;32mkike@Kike[00m:[01;34m~/full-stack-open-containers/containers-applications[01;31m(main)[00m$ exit
+[?2004lexit
+
+Script done on 2023-06-08 18:25:49+02:00 [COMMAND_EXIT_CODE="0"]
