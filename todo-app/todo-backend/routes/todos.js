@@ -2,6 +2,7 @@ const express = require('express');
 const { Todo } = require('../mongo')
 const router = express.Router();
 const { getAsync: getCounter, setAsync: setCounter } = require('../redis/index')
+const {get} = require("mongoose");
 
 const COUNTER_KEY = 'created_todos'
 
@@ -20,7 +21,7 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
-  const currentCounter = parseInt(await getCounter(COUNTER_KEY))
+  const currentCounter = parseInt(await getCounter(COUNTER_KEY)) || 0
   setCounter(COUNTER_KEY, currentCounter + 1)
 
   res.send(todo);
