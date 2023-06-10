@@ -1,0 +1,30 @@
+Script started on 2023-06-10 12:20:49+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="105" LINES="55"]
+kike@Kike:~$ sudo docker ps
+[sudo] password for kike:
+CONTAINER ID   IMAGE	 COMMAND		  CREATED	   STATUS	   PORTS					 NAMES
+4255e2477b65   mongo	 "docker-entrypoint.s…"	  24 minutes ago   Up 24 minutes   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp	 todo-backend-mongo-1
+4e822160d28b   redis	 "docker-entrypoint.s…"	  24 minutes ago   Up 24 minutes   0.0.0.0:4567->6379/tcp, :::4567->6379/tcp	 todo-backend-redis-1
+kike@Kike:~$ sudo docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS *attern
+1) "created_todos"
+127.0.0.1:6379> GET created_todos
+"5"
+127.0.0.1:6379> SET created_todosv"9001"[[NX|XX][[GET][[EXsseconds|PXmmilliseconds|EXATuunix-time-seconds
+OK
+127.0.0.1:6379> GET created_todos "9001" [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-time-seconds
+"9001"
+127.0.0.1:6379> GET created_todos
+"9002"
+127.0.0.1:6379> FLUSHDB [ASYNC|SYNC]
+OK
+127.0.0.1:6379> KEYS *attern
+(empty array)
+127.0.0.1:6379> KEYS *
+1) "created_todos"
+127.0.0.1:6379> GETScreated_todosNC]
+"1"
+127.0.0.1:6379> exit
+kike@Kike:~$ exit
+exit
+
+Script done on 2023-06-10 12:26:28+02:00 [COMMAND_EXIT_CODE="0"]
