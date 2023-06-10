@@ -1,20 +1,20 @@
 Script started on 2023-06-10 06:26:05+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="105" LINES="55"]
-[?2004h]0;root@Kike: /home/kike/full-stack-open-containers/containers-applications/script-answersroot@Kike:/home/kike/full-stack-open-containers/containers-applications/script-answers# sudo docker start  -i vibrant_bose
-[?2004l[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# sudo apr u   t update
-[?2004lbash: sudo: command not found
-[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# apt udpate
-[?2004l[1;31mE: [0mInvalid operation udpate[0m
-[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# apt-get update
-[?2004l0% [Working]0% [Connecting to archive.ubuntu.com (91.189.91.38)] [Connecting to security.ubuntu.com (185.125.190.36)                                                                                                        Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
-                                                                                                        0% [Waiting for headers]                        Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
-0% [Waiting for headers] [2 InRelease 13.7 kB/110 kB 12%]0% [Waiting for headers] [2 InRelease 13.7 kB/110 kB 12%]                                                         Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
-0% [3 InRelease 9493 B/119 kB 8%] [2 InRelease 33.2 kB/110 kB 30%]                                                                  0% [3 InRelease 47.2 kB/119 kB 40%]0% [3 InRelease 79.4 kB/119 kB 67%]                                   0% [Working]0% [Waiting for headers]                        Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
-0% [4 InRelease 2503 B/108 kB 2%]                                 0% [Working]100% [Working]              Fetched 337 kB in 2s (169 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 8%Reading package lists... 8%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# apt-get install nodejs
-[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 8%Reading package lists... 8%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 83%Reading package lists... 83%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 75%Building dependency tree... Done
-Reading state information... 0% Reading state information... 0%Reading state information... Done
+r-itvibrant_bosekike/full-stack-open-containers/containers-applications/script-answers# sudo docker start
+root@60b2404c9c89:/# sudo apt update
+bash: sudo: command not found
+root@60b2404c9c89:/# apt udpate
+E: Invalid operation udpate
+root@60b2404c9c89:/# apt-get update
+Hit:1ohttp://archive.ubuntu.com/ubuntu9jammy.InReleaseConnecting to security.ubuntu.com (185.125.190.36)
+Get:2ahttp://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:3ahttp://archive.ubuntu.com/ubuntu1jammy-updates InRelease [119 kB]
+Get:4ahttp://archive.ubuntu.com/ubuntunjammy-backports/InRelease%[108 kB]
+Fetchedo337nkBein52s (1698kB/s)%]
+Reading package lists... Done
+root@60b2404c9c89:/# apt-get install nodejs
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
 The following additional packages will be installed:
   ca-certificates javascript-common libbrotli1 libc-ares2 libicu70 libjs-highlight.js libnghttp2-14
   libnode72 libuv1 nodejs-doc openssl
@@ -27,22 +27,22 @@ The following NEW packages will be installed:
 Need to get 26.1 MB of archives.
 After this operation, 93.0 MB of additional disk space will be used.
 Do you want to continue? [Y/n] y
-0% [Working]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.10 [1183 kB]
-0% [1 openssl 13.7 kB/1183 kB 1%]0% [1 openssl 69.6 kB/1183 kB 6%]0% [1 openssl 148 kB/1183 kB 13%]2% [1 openssl 497 kB/1183 kB 42%]                                 5% [Working]            Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20230311ubuntu0.22.04.1 [155 kB]
-5% [2 ca-certificates 2513 B/155 kB 2%]                                       7% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libicu70 amd64 70.1-2 [10.6 MB]
-8% [3 libicu70 61.4 kB/10.6 MB 1%]12% [3 libicu70 1539 kB/10.6 MB 15%]15% [3 libicu70 2599 kB/10.6 MB 25%]15% [3 libicu70 2599 kB/10.6 MB 25%]18% [3 libicu70 3306 kB/10.6 MB 31%]22% [3 libicu70 4751 kB/10.6 MB 45%]27% [3 libicu70 6403 kB/10.6 MB 61%]29% [3 libicu70 6931 kB/10.6 MB 66%]                                                       1274 kB/s 14s31% [3 libicu70 7791 kB/10.6 MB 74%]                                                       1274 kB/s 13s35% [3 libicu70 8872 kB/10.6 MB 84%]                                                       1274 kB/s 12s36% [3 libicu70 9411 kB/10.6 MB 89%]                                                       1274 kB/s 12s38% [3 libicu70 10.0 MB/10.6 MB 95%]                                                       1274 kB/s 11s41% [Waiting for headers]                                                                  1274 kB/s 11s                                                                                                        Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
-42% [4 libnghttp2-14 36.9 kB/76.3 kB 48%]                                                  1274 kB/s 11s43% [Waiting for headers]                                                                  1274 kB/s 11s                                                                                                        Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libuv1 amd64 1.43.0-1 [93.1 kB]
-44% [5 libuv1 60.4 kB/93.1 kB 65%]                                                         1274 kB/s 11s45% [Waiting for headers]                                                                  1274 kB/s 11s                                                                                                        Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 javascript-common all 11+nmu1 [5936 B]
-                                                                                                        Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
-47% [7 libbrotli1 65.3 kB/315 kB 21%]                                                      1274 kB/s 10s50% [Waiting for headers]                                                                  1274 kB/s 10s                                                                                                        Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libjs-highlight.js all 9.18.5+dfsg1-1 [367 kB]
-50% [8 libjs-highlight.js 38.6 kB/367 kB 11%]                                              1274 kB/s 10s52% [Waiting for headers]                                                                  1274 kB/s 10s                                                                                                        Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-ares2 amd64 1.18.1-1ubuntu0.22.04.1 [45.1 kB]
-52% [9 libc-ares2 3761 B/45.1 kB 8%]                                                       1274 kB/s 10s54% [Waiting for headers]                                                                  1274 kB/s 10s                                                                                                        Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libnode72 amd64 12.22.9~dfsg-1ubuntu3 [10.8 MB]
-54% [10 libnode72 10.9 kB/10.8 MB 0%]                                                      1274 kB/s 10s60% [10 libnode72 1936 kB/10.8 MB 18%]                                                      1274 kB/s 8s63% [10 libnode72 2901 kB/10.8 MB 27%]                                                      1274 kB/s 8s69% [10 libnode72 4835 kB/10.8 MB 45%]                                                      1274 kB/s 6s74% [10 libnode72 6502 kB/10.8 MB 60%]                                                      1274 kB/s 5s79% [10 libnode72 8199 kB/10.8 MB 76%]                                                      1274 kB/s 4s83% [10 libnode72 9467 kB/10.8 MB 88%]                                                      1274 kB/s 3s86% [10 libnode72 10.5 MB/10.8 MB 97%]                                                      1274 kB/s 2s89% [Waiting for headers]                                                                   1274 kB/s 1s                                                                                                        Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs-doc all 12.22.9~dfsg-1ubuntu3 [2409 kB]
-89% [11 nodejs-doc 4820 B/2409 kB 0%]                                                       1274 kB/s 1s91% [11 nodejs-doc 714 kB/2409 kB 30%]                                                      2547 kB/s 0s92% [11 nodejs-doc 1003 kB/2409 kB 42%]                                                     2547 kB/s 0s98% [Working]                                                                               2547 kB/s 0s                                                                                                        Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs amd64 12.22.9~dfsg-1ubuntu3 [122 kB]
-98% [12 nodejs 13.7 kB/122 kB 11%]                                                          2547 kB/s 0s100% [Working]                                                                              2547 kB/s 0s                                                                                                        Fetched 26.1 MB in 14s (1839 kB/s)
+Get:1ahttp://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.10 [1183 kB]
+Get:2ohttp://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20230311ubuntu0.22.04.1 [155 kB]
+Get:3ahttp://archive.ubuntu.com/ubuntu]jammy/main amd64 libicu70 amd64 70.1-2 [10.6 MB]
+Get:4Whttp://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3kkB] 11s
+Get:5Whttp://archive.ubuntu.com/ubuntu8jammy/main amd64 libuv1 amd64 1.43.0-1 [93.1 kB]	   1274 kB/s 11s
+Get:6Whttp://archive.ubuntu.com/ubuntu jammy/main amd64 javascript-common all 11+nmu1 [59361B]4 kB/s 11s
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+Get:8Whttp://archive.ubuntu.com/ubuntu jammy/universe amd64 libjs-highlight.js all 9.18.5+dfsg1-1B[3670kB]
+Get:9Whttp://archive.ubuntu.com/ubuntukjammy-updates/main amd64 libc-ares2 amd64 1.18.1-1ubuntu0.22.04.1 [45.1 kB]
+Get:10ahttp://archive.ubuntu.com/ubuntu jammy/universe amd64 libnode72 amd64 12.22.9~dfsg-1ubuntu3/[10.8 MB]
+Get:11ahttp://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs-doc all 12.22.9~dfsg-1ubuntu3k[2409skB]
+Get:12ohttp://archive.ubuntu.com/ubuntu jammy/universe amd64 nodejs amd64 12.22.9~dfsg-1ubuntu37[122skB]
+Fetchedo26.1gMB1in714s/(1839BkB/s)							    2547 kB/s 0s
 debconf: delaying package configuration, since apt-utils is not installed
 Selecting previously unselected package openssl.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4468 files and directories currently installed.)
+(Reading database ... 4468 files and directories currently installed.)
 Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.10_amd64.deb ...
 Unpacking openssl (3.0.2-0ubuntu1.10) ...
 Selecting previously unselected package ca-certificates.
@@ -106,11 +106,11 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
-[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# node /usr/src/app/index.js 
-[?2004lHello World
-[?2004h]0;root@60b2404c9c89: /root@60b2404c9c89:/# [Kexit
-[?2004lexit
-[?2004h]0;root@Kike: /home/kike/full-stack-open-containers/containers-applications/script-answersroot@Kike:/home/kike/full-stack-open-containers/containers-applications/script-answers# exit
-[?2004lexit
+root@60b2404c9c89:/# node /usr/src/app/index.js
+Hello World
+root@60b2404c9c89:/# exit
+exit
+root@Kike:/home/kike/full-stack-open-containers/containers-applications/script-answers# exit
+exit
 
 Script done on 2023-06-10 06:27:41+02:00 [COMMAND_EXIT_CODE="0"]
