@@ -1,0 +1,74 @@
+Script started on 2023-06-10 10:45:09+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="211" LINES="55"]
+kike@Kike:~$ sudo docker ps
+[sudo] password for kike:
+CONTAINER ID   IMAGE	 COMMAND		  CREATED	      STATUS		 PORTS					       NAMES
+9ece134d232d   mongo	 "docker-entrypoint.s…"	  About an hour ago   Up About an hour	 0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+abddd0e4ebea   nginx	 "/docker-entrypoint.…"	  About an hour ago   Up About an hour	 0.0.0.0:8080->80/tcp, :::8080->80/tcp	       vigorous_poincare
+kike@Kike:~$ sudo docker exec -it todo-backend-mong-1 mongosh -u root -p example
+Error response from daemon: No such container: todo-backend-mong-1
+kike@Kike:~$ sudo docker exec -it todo-backend-mongo1 mongosh -u root -p example
+Current Mongosh Log ID: 6484383c6a6e52d54744073f
+Connecting to:		mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.1
+Using MongoDB:		6.0.6
+Using Mongosh:		1.9.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+ ------
+   The server generated these startup warnings when booting
+   2023-06-10T07:45:11.047+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-06-10T07:45:11.321+00:00: vm.max_map_count is too low
+------
+
+test> show dbs
+admin	      100.00 KiB
+config	      108.00 KiB
+local	       72.00 KiB
+the_database   72.00 KiB
+test> use the_database
+switched to db the_database
+the_database> show collections
+todos
+the_database> db.todossthe_database> db.todos.find({})
+[
+  {
+    _id: ObjectId("64841774bfe4d7087ed73499"),
+    text: 'Write code',
+    done: true
+  },
+  {
+    _id: ObjectId("64841774bfe4d7087ed7349a"),
+    done: false,
+    text: 'Learn about containers'
+  }
+]
+the_database> db.todos.insertOne({testthe_database> db.todos.insertOne({testhe_database> db.todos.insertOne({textthe_database> db.todos.insertOne({textthe_database> db.todos.insertOne({text: ""the_database> db.todos.insertOne({text: ""the_database> db.todos.insertOne({text: ""the_database> db.todos.insertOne({text: ""the_database> db.todos.insertOne({text: "I"the_database> db.todos.insertOne({text: "In"the_database> db.todos.insertOne({text: "Inc"the_database> db.todos.insertOne({text: "Incr"the_database> db.todos.insertOne({text: "Incre"the_database> db.todos.insertOne({text: "Increa"the_database> db.todos.insertOne({text: "Increas"the_database> db.todos.insertOne({text: "Increase"the_database> db.todos.insertOne({text: "Increase "the_database> db.todos.insertOne({text: "Increase t"the_database> db.todos.insertOne({text: "Increase th"the_database> db.todos.insertOne({text: "Increase the"the_database> db.todos.insertOne({text: "Increase the "the_database> db.todos.insertOne({text: "Increase the n"the_database> db.todos.insertOne({text: "Increase the nu"the_database> db.todos.insertOne({text: "Increase the num"the_database> db.todos.insertOne({text: "Increase the numb"the_database> db.todos.insertOne({text: "Increase the numbe"the_database> db.todos.insertOne({text: "Increase the number"the_database> db.todos.insertOne({text: "Increase the number "the_database> db.todos.insertOne({text: "Increase the number o"the_database> db.todos.insertOne({text: "Increase the number of"the_database> db.todos.insertOne({text: "Increase the number of "the_database> db.todos.insertOne({text: "Increase the number of t"the_database> db.todos.insertOne({text: "Increase the number of to"the_database> db.todos.insertOne({text: "Increase the number of too"the_database> db.todos.insertOne({text: "Increase the number of tool"the_database> db.todos.insertOne({text: "Increase the number of tools"the_database> db.todos.insertOne({text: "Increase the number of tools "the_database> db.todos.insertOne({text: "Increase the number of tools i"the_database> db.todos.insertOne({text: "Increase the number of tools in"the_database> db.todos.insertOne({text: "Increase the number of tools in "the_database> db.todos.insertOne({text: "Increase the number of tools in m"the_database> db.todos.insertOne({text: "Increase the number of tools in my"the_database> db.todos.insertOne({text: "Increase the number of tools in my "the_database> db.todos.insertOne({text: "Increase the number of tools in my t"the_database> db.todos.insertOne({text: "Increase the number of tools in my to"the_database> db.todos.insertOne({text: "Increase the number of tools in my too"the_database> db.todos.insertOne({text: "Increase the number of tools in my tool"the_database> db.todos.insertOne({text: "Increase the number of tools in my toolb"the_database> db.todos.insertOne({text: "Increase the number of tools in my toolbe"the_database> db.todos.insertOne({text: "Increase the number of tools in my toolbel"the_database> db.todos.insertOne({text: "Increase the number of tools in my toolbelt"the_database> db.todos.insertOne({text: "Increase the number of tools in my toolbelt", done: false})
+{
+  acknowledged: true,
+  insertedId: ObjectId("648438846a6e52d547440740")
+}
+the_database> the_database> db.find({})
+TypeError: db.find is not a function
+the_database> the_database> db.find({})the_database> db.find({})the_database> db.find({})the_database> db.tfind({})the_database> db.tofind({})the_database> db.todfind({})the_database> db.todofind({})the_database> db.todosfind({})the_database> db.todos.find({})
+[
+  {
+    _id: ObjectId("64841774bfe4d7087ed73499"),
+    text: 'Write code',
+    done: true
+  },
+  {
+    _id: ObjectId("64841774bfe4d7087ed7349a"),
+    done: false,
+    text: 'Learn about containers'
+  },
+  {
+    _id: ObjectId("648438846a6e52d547440740"),
+    text: 'Increase the number of tools in my toolbelt',
+    done: false
+  }
+]
+the_database> exit
+kike@Kike:~$ exit
+exit
+
+Script done on 2023-06-10 10:47:25+02:00 [COMMAND_EXIT_CODE="0"]
