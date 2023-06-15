@@ -62,4 +62,5 @@ typings/
 
 # docker bind folder
 mongo_data/
+# JetBrains
 .idea/
