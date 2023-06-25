@@ -47,13 +47,16 @@ singleRouter.get('/', async (req, res) => {
 });
 
 singleRouter.put('/', async (req, res) => {
+  console.log('received update', req.body)
+
   const todo = req.todo
 
   if (req.body.text)
     todo.text =  req.body.text
 
-  if (req.body.done)
-    todo.done = req.body.done === 'true'
+  todo.done = req.body.done || false
+
+  console.log('new todo', todo)
 
   todo.save()
   res.send(todo)
