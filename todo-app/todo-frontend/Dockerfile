@@ -20,7 +20,7 @@ WORKDIR /usr/src/app
 
 COPY --from=test-stage /usr/src/app/test /usr/src/app
 
-ENV REACT_APP_BACKEND_URL=http://localhost:3000
+ENV REACT_APP_BACKEND_URL='http://localhost:8080/api'
 
 RUN npm run build
 
@@ -28,4 +28,3 @@ RUN npm run build
 FROM nginx:1.20-alpine
 
 COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
-
