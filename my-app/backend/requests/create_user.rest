@@ -1,0 +1,11 @@
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "name": "rest user",
+  "username": "restuser",
+  "password": "secretuser"
+}
+
+### Get all
+GET http://localhost:3003/api/blogs

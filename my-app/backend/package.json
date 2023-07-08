@@ -1,0 +1,37 @@
+{
+  "name": "blog-list",
+  "version": "1.0.0",
+  "description": "application that allows users to save information about interesting blogs they have stumbled across on the internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "clear && cross-env NODE_ENV=test jest --verbose --runInBand --force-exit",
+    "dev": "cross-env NODE_ENV=dev nodemon index.js",
+    "start:test": "cross-env NODE_ENV=test node index.js"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.5.1"
+  },
+  "author": "Enrique Verea",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "eslint": "^8.21.0",
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19",
+    "supertest": "^6.2.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.5.1"
+  }
+}
