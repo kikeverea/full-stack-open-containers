@@ -1,9 +1,9 @@
-const Blog = require('../models/blog')
-const User = require('../models/user')
+const Blog = require('../mongo/models/blog')
+const User = require('../mongo/models/user')
 const usersHelper = require('./users_helper')
 const blogsHelper = require('./blogs_helper')
 const bcrypt = require('bcrypt')
-const Comment = require('../models/comment')
+const Comment = require('../mongo/models/comment')
 
 let lastUsedUserInd = usersHelper.initialUsers.length
 

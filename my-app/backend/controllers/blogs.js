@@ -1,7 +1,7 @@
 const blogsRouter = require('express').Router()
-const Blog = require('../models/blog')
-const User = require('../models/user')
-const Comment = require('../models/comment')
+const Blog = require('../mongo/models/blog')
+const User = require('../mongo/models/user')
+const Comment = require('../mongo/models/comment')
 const middleware = require('../utils/middleware')
 
 blogsRouter.get('/', async (request, response) => {
