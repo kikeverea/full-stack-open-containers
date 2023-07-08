@@ -1,0 +1,47 @@
+services:
+  nginx:
+    image: nginx
+    depends_on:
+      - frontend
+    ports:
+      - 3000:80
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    container_name: reverse_proxy
+
+  frontend:
+    image: blog-app-frontend
+    build:
+      context: frontend/
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./frontend:/usr/src/app
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3000/api
+    depends_on:
+      - backend
+    container_name: frontend
+
+  backend:
+    image: blog-app-backend
+    build:
+      context: backend/
+      dockerfile: dev.Dockerfile
+    environment:
+      - PORT=5000
+      - DATABASE_URI=mongodb://dev:pass@mongo:27017/dev_database
+      - SECRET=sekret
+    depends_on:
+      - mongo
+    container_name: backend
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: dev_database
+    volumes:
+      - ./backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./backend/mongo_data:/data/db
+    container_name: mongodb
