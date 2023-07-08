@@ -15,16 +15,20 @@ const App = () => {
   useEffect(() => {
     const user = usersService.getUserFromLocal()
     if (user) {
-      setUser(user)
+
+      const setAsLoggedInUser = async user =>
+        await loggedIn(user, false)
+
+      setAsLoggedInUser(user).catch(console.error)
     }
   }, [])
 
-  const loggedIn = async (user) => {
-    console.log('Called')
+  const loggedIn = async (user, notifySuccess=true) => {
     if (user) {
       user.blogs = await blogsService.fetchUserBlogs(user.id)
       saveUserInLocal(user)
-      showNotification('Logged in', 'success')
+      if (notifySuccess)
+        showNotification('Logged in', 'success')
     }
     else {
       showNotification('Login failed. Wrong credentials', 'fail')
