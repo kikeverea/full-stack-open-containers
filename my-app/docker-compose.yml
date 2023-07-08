@@ -1,0 +1,43 @@
+services:
+  nginx:
+    image: nginx
+    depends_on:
+      - frontend
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    container_name: nginx-production
+
+  frontend:
+    image: blog-app-frontend-prod
+    build:
+      context: frontend/
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    container_name: frontend-production
+
+  backend:
+    image: blog-app-backend-prod
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    environment:
+      - PORT=5000
+      - DATABASE_URI=mongodb://admin:pass@mongo:27017/prod_db
+      - SECRET=sekret
+    depends_on:
+      - mongo
+    container_name: backend-production
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: database
+    volumes:
+      - ./backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./backend/mongo_data:/data/db
+    container_name: mongodb
