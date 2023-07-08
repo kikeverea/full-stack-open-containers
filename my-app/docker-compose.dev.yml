@@ -29,7 +29,7 @@ services:
       dockerfile: dev.Dockerfile
     environment:
       - PORT=5000
-      - DATABASE_URI=mongodb://dev:pass@mongo:27017/dev_database
+      - DATABASE_URI=mongodb://dev:pass@mongo:27017/dev_db
       - SECRET=sekret
     depends_on:
       - mongo
