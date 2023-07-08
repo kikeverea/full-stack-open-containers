@@ -3,15 +3,26 @@ import FormField from './FormField'
 import Flex from './Flex'
 import PropTypes from 'prop-types'
 
-const LoginForm = ({ loginService, userLoggedIn }) => {
+
+const LoginForm = ({ login, signup, userLoggedIn }) => {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [action, setAction] = useState('')
 
-  const handleLogin = async (event) => {
+  const setLogin = () =>
+    setAction('login')
+
+  const setSignUp = () =>
+    setAction('signup')
+
+  const handleFormSubmit = async event => {
     event.preventDefault()
     try {
-      const user = await loginService.login(username, password)
+      const user = action === 'login'
+        ? await login(username, password)
+        : await signup(username, password)
+
       await userLoggedIn(user)
       setUsername('')
       setPassword('')
@@ -23,7 +34,7 @@ const LoginForm = ({ loginService, userLoggedIn }) => {
   }
 
   return (
-    <form onSubmit={ handleLogin }>
+    <form onSubmit={ handleFormSubmit }>
       <Flex customStyle={{
         flexDirection: 'column',
         gap: 10,
@@ -32,15 +43,11 @@ const LoginForm = ({ loginService, userLoggedIn }) => {
       }}>
         <FormField name='User' value={ username } inputChange={ setUsername } />
         <FormField name='Password' value={ password } inputChange={ setPassword } />
-        <input id='submitButton' type='submit' value='login'/>
+        <input id="loginButton" type='submit' value='login' onClick={ ()=> setLogin() }/>
+        <input id='signupButton' type='submit' value='sign up' onClick={ ()=> setSignUp() }/>
       </Flex>
     </form>
   )
-}
-
-LoginForm.propTypes = {
-  loginService: PropTypes.object.isRequired,
-  userLoggedIn: PropTypes.func.isRequired
 }
 
 export default LoginForm

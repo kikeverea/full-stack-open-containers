@@ -4,7 +4,7 @@ import LoggedUser from './components/LoggedUser'
 import LoginForm from './components/LoginForm'
 import Notification from './components/Notification'
 
-import loginService from './services/login'
+import { login, signup } from './services/login'
 import usersService from './services/users'
 import blogsService from './services/blogs'
 
@@ -15,7 +15,6 @@ const App = () => {
   useEffect(() => {
     const user = usersService.getUserFromLocal()
     if (user) {
-
       const setAsLoggedInUser = async user =>
         await loggedIn(user, false)
 
@@ -74,7 +73,7 @@ const App = () => {
           <UserBlogs user={ user } onBlogsChange={ handleBlogsListChange }/>
         </>
         :
-        <LoginForm loginService={ loginService } userLoggedIn={ loggedIn }/>
+        <LoginForm login ={ login } signup = { signup } userLoggedIn={ loggedIn }/>
       }
     </div>
   )

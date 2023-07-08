@@ -8,7 +8,7 @@ const login = (username, password, expectedStatus) => {
   cy.get('#User').type(username)
   cy.get('#Password').type(password)
 
-  submitForm('http://localhost:3000/api/login', '#submitButton', expectedStatus)
+  submitForm('http://localhost:3000/api/login', '#loginButton', expectedStatus)
 }
 
 const addDummyBlog = (times=1) => {
